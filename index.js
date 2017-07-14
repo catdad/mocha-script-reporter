@@ -14,7 +14,7 @@ module.exports = function ScriptReporter(runner, options) {
     throw new Error(NO_PATH_OPTION);
   }
 
-  var reporterPath = path.resolve(options.reporterOptions.path);
+  var reporterPath = path.resolve('.', options.reporterOptions.path);
 
   try {
     require.resolve(reporterPath);

@@ -37,7 +37,19 @@ describe('[index]', function () {
     ));
   });
 
-  it('resolves paths based on cwd');
+  it('resolves paths based on cwd', function () {
+    var PATH = 'fixtures/does-not-exist.js';
+    var expectedPath = path.resolve(process.cwd(), PATH);
+
+    expect(libFunc({}, {
+      reporterOptions: {
+        path: PATH
+      }
+    })).to.throw(Error, util.format(
+      'no file found at "%s"',
+      expectedPath
+    ));
+  });
 
   it('requires the file provided in options.reporterOptions.path');
 });
