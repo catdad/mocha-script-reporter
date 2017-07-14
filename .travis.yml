@@ -19,17 +19,17 @@ script:
 #  - npm run coverage
 #  - codeclimate-test-reporter < coverage/lcov.info
 
-#jobs:
-#  include:
-#    - stage: npm release
-#      node_js: '6'
-#      script: echo "Deploying to npm ..."
-#      after_script: skip
-#      deploy:
-#        provider: npm
-#        email: vatev.1+npm@gmail.com
-#        api_key:
-#          secure: RjzxzYR+GtzaMN73t+++oEjnPgpBlESiT2uLySvKHUJvqBOOXkynoBEHvuUWY6CN5kmHxGlwpJnN4b3eMnS290JX1/qzyFLAkHIqru89ji6e2PeSlg/BG9LT+f3sXQUjZZ91YsrBsHLvz0MfTGSTaGdarOVjKAJhTyPOKYZCeE8m4IyXrumg+30/6ly9uQB2Iwwku+nN2imhqxZavxZ++BJBX/i7betjnczcV+iuuuntlWQ0icg+KlOMk14xC6CZickcG7g2Z04WCeAyB0fc4jMeYb3sebBzTrEm/bIFjn+QvJ9ZSH5v/hqpuPmSbogXdf6eDdTpXloAMTNu1nz9Ruo9bU8SWk6a89u8Snidhhdndr5hLnWx0xeb7ZF4t36sNEcX/gkRUBlb8Fv7jkkUxpBXyEDYoyeon4SbnTdW5e0280kcpnQwJUR5K8aS4/jk7bmy686+ajQDuHmABnIuij8qNSpcUdEfXHLWq9IggSPZVtpNanlzBcgDKhycQOuYaS16MxXCcQumG+xR1FJEjn/sUgecNYZHRlsvStDt54QRv02cVawAloEbg9VBn6xJCgCpcbKuSU+14z24OwN4me5Eak7TWqWLWK9XDihOlr9Q02HWg9ztLk+x2jHDdJxRFpDLHIHgzGOJ8Sv/gVteCqtGkyATo1fNIYWwDqG0GCg=
-#        on:
-#          tags: true
-#          repo: catdad/grandma
+jobs:
+  include:
+    - stage: npm release
+      node_js: '6'
+      script: echo "Deploying to npm ..."
+      after_script: skip
+      deploy:
+        provider: npm
+        email: vatev.1+npm@gmail.com
+        api_key:
+          secure: au15nS6dstyZibmotHJ4DX2NnYTzYLWOOf73VzvO1Hv2ybxLCNAUKezPJBLDk+g1975ExD77v5fZbvnwyuFIOZfkMYzu4hOwwhFDhJu9EQQ5BWuGhUQafPD8ualErjk/poBQSCAP/XMBvfHNwWJyRPvH+8hXs8WdOkD1V8G69t/BiSDtyXfg1haSZrZlkJyE/+meQHymRIglfwdcSxvsWhrLc6Oad5SoeoL7xyu/BOmNUoCs0wg80rZKp1rRER0EgZrDRL1cp4Vroh3fTQfBm/2ruer3Xw7y8vQezbbjGpeZW92aoGMH3Pprpb0Dtcif/YSseHg2zdzLElV99/8V35YpIHsyKmY5k8NUZyxLGGsHNTTwW+hb5VbBCrI2KCbNGez6l+5A/61OOGnJn5AAvlKHgoBNX8HjAiFJFoVEKdltRVBldRL2eqnC0pQc2Xjcr4Da/9hSgD0LT2EAfCHeQozKrFH28KLatSyqhFYfS7vs4SaBpyiumLBlB0b08OP0og5kXjtyOCEuM9/qUpDHfF+8mH9QmYYykE8q6aRwtPG89gbztZimkdEx8AvxzYPyWhi+PsJzQSiZHL4QP23DG/pFS7/0scN3ty5tmJZrG/pc8ZpnyK2mYVplMfjMgUdMwIqslSnQeZNt8InM1adK14PyBTOE/rpXOmo+URQMvOs=
+        on:
+          tags: true
+          repo: catdad/mocha-script-reporter
