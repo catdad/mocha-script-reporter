@@ -52,6 +52,8 @@ describe('[index]', function () {
   });
 
   it('requires the file provided in options.reporterOptions.path');
+
+  it('can be called with the new keyword');
 });
 
 describe('[cli usage]', function () {
