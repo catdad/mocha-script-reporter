@@ -11,13 +11,12 @@ node_js:
 script:
   - npm test
 
-#addons:
-#  code_climate:
-#    repo_token: 08120a5f6442a389a93094fd9f5f25099e912f4807936ff46f85234037ca9585
-#
-#after_script:
-#  - npm run coverage
-#  - codeclimate-test-reporter < coverage/lcov.info
+addons:
+  code_climate:
+    repo_token: 3f3c40f0eba571fae7a4941f374392429a4c879f8d69181873f90675d06611ee
+
+after_script:
+  - codeclimate-test-reporter < coverage/lcov.info
 
 jobs:
   include:
