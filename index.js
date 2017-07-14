@@ -22,7 +22,7 @@ module.exports = function ScriptReporter(runner, options) {
     throw new Error(util.format(FILE_DOES_NOT_EXIST, reporterPath));
   }
 
-  var reporter = require(reporterPath);
+  var Reporter = require(reporterPath);
 
-  return new reporter(runner, options);
+  return new Reporter(runner, options);
 };
