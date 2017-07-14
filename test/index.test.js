@@ -20,7 +20,7 @@ describe('[index]', function () {
       '--reporter-options path=./path/to/file.js'
     );
 
-    expect(libFunc({}, {})).to.throw(errMessage);
+    expect(libFunc({}, {})).to.throw(Error, errMessage);
   });
 
   it('throws if the file in the provided path does not exist', function () {
@@ -31,7 +31,7 @@ describe('[index]', function () {
       reporterOptions: {
         path: PATH
       }
-    })).to.throw(util.format(
+    })).to.throw(Error, util.format(
       'no file found at "%s"',
       expectedPath
     ));
