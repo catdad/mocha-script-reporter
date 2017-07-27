@@ -15,15 +15,16 @@ addons:
   code_climate:
     repo_token: 3f3c40f0eba571fae7a4941f374392429a4c879f8d69181873f90675d06611ee
 
-after_script:
-  - codeclimate-test-reporter < coverage/lcov.info
-
 jobs:
   include:
+    - stage: coverage
+      node_js: '6'
+      script:
+        - npm run coverate
+        - codeclimate-test-reporter < coverage/lcov.info
     - stage: npm release
       node_js: '6'
       script: echo "Deploying to npm ..."
-      after_script: skip
       deploy:
         provider: npm
         email: vatev.1+npm@gmail.com
