@@ -20,7 +20,7 @@ jobs:
     - stage: coverage
       node_js: '6'
       script:
-        - npm run coverate
+        - npm run coverage
         - codeclimate-test-reporter < coverage/lcov.info
     - stage: npm release
       node_js: '6'
